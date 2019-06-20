@@ -174,3 +174,13 @@ variable "use_num_suffix" {
   default     = false
 }
 
+variable "num_suffix_format" {
+  description = "Allow a different output format for the suffix"
+  default     = "%s-%d"
+}
+
+variable "start_suffix_index" {
+  description = "Value to start the suffix index on. Default is 1"
+  default     = 1
+}
+
