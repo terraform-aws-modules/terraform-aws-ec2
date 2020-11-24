@@ -108,6 +108,7 @@ No requirements.
 |------|-------------|------|---------|:--------:|
 | ami | ID of AMI to use for the instance | `string` | n/a | yes |
 | associate\_public\_ip\_address | If true, the EC2 instance will have associated public IP address | `bool` | `null` | no |
+| aws\_ebs\_volume | Additional EBS block devices to attach to the instance, using aws\_ebs\_volume resource | `map(map(string))` | `{}` | no |
 | cpu\_credits | The credit option for CPU usage (unlimited or standard) | `string` | `"standard"` | no |
 | disable\_api\_termination | If true, enables EC2 Instance Termination Protection | `bool` | `false` | no |
 | ebs\_block\_device | Additional EBS block devices to attach to the instance | `list(map(string))` | `[]` | no |
@@ -146,6 +147,7 @@ No requirements.
 |------|-------------|
 | arn | List of ARNs of instances |
 | availability\_zone | List of availability zones of instances |
+| aws\_ebs\_block\_device\_volume\_ids | List of volume IDs of attached EBS block devices of instances |
 | credit\_specification | List of credit specification of instances |
 | ebs\_block\_device\_volume\_ids | List of volume IDs of EBS block devices of instances |
 | id | List of IDs of instances |
